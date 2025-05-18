@@ -6,9 +6,25 @@
   Expected Output: For 'hello' → 'olleh'
 */
 
-function reverse_string() {
+function reverse_string(text) {
   // Your code here
+  let textArr = text.split('');
+  
+  
+  let temp;
+  for(let i = 0 ; i < Math.floor(textArr.length / 2) ; i++ )
+  {
+    temp = textArr[i];
+    textArr[i]  = textArr[textArr.length - 1 - i];
+    textArr[textArr.length - 1 - i] = temp;
+    
+  }
+  
+  
+  return textArr.join('');
+  
 }
 
 // Test the function
-console.log(reverse_string()); // Should return For 'hello' → 'olleh'
+const text = 'hello world';
+console.log(reverse_string(text)); // Should return For 'hello' → 'olleh'

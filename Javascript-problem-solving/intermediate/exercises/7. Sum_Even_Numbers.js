@@ -6,9 +6,18 @@
   Expected Output: [1,2,3,4] → 6
 */
 
-function sum_even_numbers() {
+function sum_even_numbers(numbers) {
   // Your code here
+  let sum = 0;
+  for(let number of numbers){
+    if(number%2 == 0) {
+      sum += number;
+    } 
+  }
+  
+  return sum;
 }
 
 // Test the function
-console.log(sum_even_numbers()); // Should return [1,2,3,4] → 6
+const numbers = [1,2,3,4];
+console.log(sum_even_numbers(numbers)); // Should return [1,2,3,4] → 6

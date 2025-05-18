@@ -6,9 +6,11 @@
   Expected Output: [3,1,2] sorted asc → [1,2,3]
 */
 
-function sort_numbers() {
+function sort_numbers(numbers) {
   // Your code here
+  return numbers.sort((a,b) => a-b );
 }
 
 // Test the function
-console.log(sort_numbers()); // Should return [3,1,2] sorted asc → [1,2,3]
+const numbers = [3,1,2];
+console.log(sort_numbers(numbers)); // Should return [3,1,2] sorted asc → [1,2,3]
