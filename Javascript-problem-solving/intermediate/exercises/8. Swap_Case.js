@@ -6,9 +6,12 @@
   Expected Output: 'Hello World' → 'hELLO wORLD'
 */
 
-function swap_case() {
+function swap_case(text) {
   // Your code here
+  return text.split('').map(e=> e == e.toUpperCase() ? e.toLowerCase() : e.toUpperCase() ).join('');
+
+
 }
 
 // Test the function
-console.log(swap_case()); // Should return 'Hello World' → 'hELLO wORLD'
+console.log(swap_case("Hello World")); // Should return 'Hello World' → 'hELLO wORLD'
